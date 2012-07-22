@@ -1,5 +1,5 @@
 CLPadMapper
-===========
+-----------
 
 This is an improved and extended version of the CLPadMapper project located in the Node_Presentation repo. It has a slightly more stable crawler, filtering options, and more data parsed out of each request.
 
