@@ -4,6 +4,26 @@
 		"selected_items":
 		[
 			[
+				"clPos",
+				"clPostObj"
+			],
+			[
+				"tail",
+				"tailSinatraLog"
+			],
+			[
+				"list",
+				"list-style-type"
+			],
+			[
+				"c",
+				"container"
+			],
+			[
+				"coord",
+				"coordCache"
+			],
+			[
 				"for",
 				"for	for (…) {…}"
 			],
@@ -91,11 +111,19 @@
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 47.0,
+		"height": 67.0,
 		"selected_items":
 		[
 			[
 				"format",
+				"Format: Javascript"
+			],
+			[
+				"for",
+				"Format: Javascript"
+			],
+			[
+				"form",
 				"Format: Javascript"
 			],
 			[
@@ -207,7 +235,7 @@
 				"Git: Status"
 			]
 		],
-		"width": 494.0
+		"width": 602.0
 	},
 	"console":
 	{
@@ -224,25 +252,34 @@
 	},
 	"file_history":
 	[
-		"/Users/ckm2k1/Programming/CLPadMapper/coordCache.ex",
-		"/Users/ckm2k1/Programming/CLPadMapper/index.html",
 		"/Users/ckm2k1/Programming/CLPadMapper/cl-crawler.js",
+		"/Users/ckm2k1/Programming/CLPadMapper/coordCache.js",
+		"/Users/ckm2k1/Programming/CLPadMapper/sliders.js",
+		"/Users/ckm2k1/Programming/CLPadMapper/mapper.js",
+		"/Users/ckm2k1/Programming/CLPadMapper/css/main.css",
+		"/Users/ckm2k1/Programming/CLPadMapper/templates.js",
+		"/Users/ckm2k1/Programming/CLPadMapper/index.html",
+		"/Users/ckm2k1/Programming/George/george.sublime-project",
+		"/Users/ckm2k1/Programming/CLPadMapper/CLPadMapper.sublime-project",
+		"/Users/ckm2k1/Programming/CLPadMapper/coordCache.ex.js",
+		"/Users/ckm2k1/.config/fish/config.fish",
+		"/Users/ckm2k1/Programming/CLPadMapper/info-template.js",
+		"/Users/ckm2k1/Library/Application Support/Sublime Text 2/Packages/ChangeQuotes/Default.sublime-keymap",
+		"/Users/ckm2k1/Library/Application Support/Sublime Text 2/Packages/ChangeQuotes/Example.sublime-keymap",
+		"/Users/ckm2k1/Library/Application Support/Sublime Text 2/Packages/ChangeQuotes/Default.sublime-commands",
+		"/Users/ckm2k1/Programming/CLPadMapper/coordCache.ex",
 		"/Users/ckm2k1/Dropbox/Presentations/Basic Node.js/CLPadMapper/index.html",
 		"/Users/ckm2k1/Programming/CLPadMapper/crawler/crawler.js",
 		"/Users/ckm2k1/Programming/CLPadMapper/testCrawl.js",
 		"/Users/ckm2k1/Dropbox/Presentations/Basic Node.js/NodeJS_Presentation/README.md",
-		"/Users/ckm2k1/Programming/CLPadMapper/mapper.js",
 		"/Users/ckm2k1/Dropbox/Presentations/Basic Node.js/NodeJS_Presentation/CLPadMapper/index.html",
 		"/Users/ckm2k1/Dropbox/Presentations/Basic Node.js/NodeJS_Presentation/.gitignore",
 		"/Users/ckm2k1/Programming/CLPadMapper/cl.txt",
-		"/Users/ckm2k1/Programming/CLPadMapper/coordCache.ex.js",
-		"/Users/ckm2k1/Programming/CLPadMapper/CLPadMapper.sublime-project",
 		"/Users/ckm2k1/.ssh/config",
 		"/etc/ssh_config",
 		"/Users/ckm2k1/Dropbox/Presentations/Basic Node.js/scripts/viewServer.js",
 		"/Users/ckm2k1/Dropbox/Presentations/Basic Node.js/presentation.html",
 		"/Users/ckm2k1/Dropbox/Presentations/Basic Node.js/curry.js",
-		"/Users/ckm2k1/.config/fish/config.fish",
 		"/Users/ckm2k1/work/esl.frontend/esl/templates/partials/chrome.haml",
 		"/Users/ckm2k1/work/esl.frontend/config/vhosts/localhost.80.vhost.conf",
 		"/Users/ckm2k1/work/esl.frontend/esl/templates/layout.haml",
@@ -342,16 +379,7 @@
 		"/Users/ckm2k1/work/esl.frontend/esl/helpers/request_helpers.rb",
 		"/Users/ckm2k1/work/esl.frontend/lib/aws/quota_collection.rb",
 		"/Users/ckm2k1/work/esl.frontend/esl/views/package.rb",
-		"/Users/ckm2k1/work/esl.frontend/lib/aws/sender.rb",
-		"/Users/ckm2k1/work/esl.frontend/production/public/javascript/ceremony.js",
-		"/Users/ckm2k1/work/esl.qa.autotests/config.xml",
-		"/Users/ckm2k1/Library/Application Support/Sublime Text 2/Packages/Indent XML/Default (OSX).sublime-keymap",
-		"/Users/ckm2k1/work/esl.qa.autotests/logs/2012_05_18@13_31_04/failed/beforeClass/SignupFromInviteeTests.beforeClass.log",
-		"/Users/ckm2k1/work/esl.frontend/spec/ruby/fixtures/package.fixture.rb",
-		"/Users/ckm2k1/work/esl.frontend/spec/ruby/model/package_spec.rb",
-		"/Users/ckm2k1/work/esl.frontend/esl/templates/js/esr.haml",
-		"/Users/ckm2k1/work/esl.frontend/lib/aws/esl.rb",
-		"/Users/ckm2k1/work/esl.frontend/esl/views/guest.rb"
+		"/Users/ckm2k1/work/esl.frontend/lib/aws/sender.rb"
 	],
 	"find":
 	{
@@ -412,6 +440,22 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"i",
+			"update",
+			"filterMarkers(markers, [\"rent\", \"bedrooms\"], sliderCallback);",
+			"filterMarkers",
+			"elem",
+			"link to original",
+			"set -xU",
+			"10",
+			"span",
+			"#",
+			"h3",
+			"<li>",
+			"body",
+			"rent",
+			"postTitle",
+			"search",
 			"filterInput",
 			"type=\"text\" name=",
 			"type=\"text\" name=\"bedrooms\"",
@@ -523,23 +567,7 @@
 			"pp",
 			"pp ",
 			"pp",
-			"ajax",
-			"timeout",
-			"upload",
-			"lowest_price_plan_in",
-			"root_proxy_url",
-			" =",
-			"\"",
-			"\"    }",
-			"id : 1005957097,",
-			"id",
-			"label",
-			"id : '3Yu7uJ5LTYZd',",
-			"id : 1015007502",
-			"value",
-			"<!-- ",
-			"entity.name.class",
-			"solid"
+			"ajax"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -603,7 +631,7 @@
 		"cols":
 		[
 			0.0,
-			0.5,
+			0.535005658586,
 			1.0
 		],
 		"rows":
