@@ -77,7 +77,6 @@ function filterMarkers(list, props) {
   }
 }
 
-
 function inRange (val, min, max) {
   return val >= min && val <= max;
 }
