@@ -1,0 +1,113 @@
+html { height: 100% }
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  font-family: Helvetica, Verdana, sans-serif;
+}
+
+h1, h2 ,h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+}
+
+
+#map_canvas { height: 100% }
+
+#filtersWrapper {
+  width: 500px;
+  background-color: rgba(255,255,255, 0.9);
+  border-radius: 10px;
+  box-shadow: 2px 2px 15px #888;
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  padding: 20px;
+}
+
+.filter-title {
+  margin-bottom: 15px;
+  border-bottom: 1px solid #ccc;
+  color: #F6A828;
+  font-size: 1.2em;
+}
+
+#filters {
+  margin: 0 auto;
+}
+
+#filters .slider-rentrange, .slider-bedrooms {
+  width: 390px;
+  float: right;
+  margin-top: 10px;
+}
+
+.rent-labels, .bedroom-labels {
+  float: left;
+  width: 100px;
+  font-weight: bold;
+}
+.label {
+  color: darkblue;
+  font-weight: bold;
+}
+ul.filterList {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul.filterList li {
+  display: block;
+}
+
+#ci {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+  width: 602px;
+  height: 452px;
+  border: 1px #CCC solid;
+}
+.iw::before, .iw::after {
+content: "";
+display: table;
+}
+.iw::after {
+clear: both;
+}
+
+.iw div {
+float: left;
+margin: 2px;
+}
+
+.tn {
+clear: both;
+}
+
+#iwt {
+margin: 0;
+}
+
+.iw div {
+float: left;
+margin: 2px;
+}
+
+#ci * {
+vertical-align: middle;
+}
+
+img {
+border: 0;
+}
+
+#ci span {
+display: inline-block;
+height: 100%;
+}
+#ci {
+text-align: center;
+}

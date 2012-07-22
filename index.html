@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/themes/ui-lightness/jquery-ui.css"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAvayKvKQHlGJ3B-Uokjp306F__q78sdSk&sensor=false"></script>
+
+    <link rel="stylesheet" href="css/main.css">
+    <script type="text/javascript" src="coordCache.js"></script>
+    <script type="text/javascript" src="templates.js"></script>
+    <script type="text/javascript" src="mapper.js"></script>
+    <script type="text/javascript" src="sliders.js"></script>
+
+    <script type="text/javascript">
+      $(document).ready(function(){
+        initialize();
+        sliders();
+      });
+    </script>
+  </head>
+  <body>
+
+    <script type="text/html" id="info_template">
+      <h2><%=title%></h2>
+        <h4>Rent: $<%=rent%>, Bed: <%=bedrooms%>br</h4>
+      <%=body%>
+      <a href='<%=clPostURL%>'>Link to original CL post</a>
+    </script>
+
+
+    <div id="map_canvas" style="width:100%; height:100%"></div>
+    <div id="filtersWrapper">
+      <div id="filters">
+        <h2 class="filter-title">Filter by Rent and Bedrooms</h2>
+        <ul class='filterList'>
+          <li>
+              <div class="rent-labels">
+                <div class="label">Rent Range</div>
+                <span class="rent-label"></span>
+              </div>
+              <div class="slider-rentrange"></div>
+          </li>
+          <li>
+            <div style="clear:both;height:5px;"></div>
+            <div class="bedroom-labels">
+              <div class="label">Bedrooms</div>
+              <span class="bedroom-label"></span>
+            </div>
+            <div class="slider-bedrooms"></div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
