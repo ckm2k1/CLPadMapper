@@ -55,41 +55,6 @@ function initialize() {
   markers.bedrooms = [1, 2];
 }
 
-// function filterMarkers(prop, min, max) {
-
-//   for (marker in markers) {
-//     var marker = markers[marker];
-//     console.log(marker)
-//     if (marker[prop] < min || marker[prop] > max) {
-//       marker.marker.setMap(null);
-//     }
-//     else if (marker.marker.getMap() === null) {
-//       marker.marker.setMap(map);
-//     }
-//   }
-// }
-
-// function filterMarkers(list, props, cb) {
-//   var passes = false
-//   , min = 0
-//   , max = 1;
-//   for (var index=0; index<list.length; index++) {
-//     var elem = list[index];
-//     for (var prop=0; prop<props.length; prop++) {
-//       var prop = props[prop];
-//       if (inRange(elem[prop], list[prop][min], list[prop][max])) {
-//           passes = true;
-//           continue;
-//       }
-//       else {
-//         passes = false;
-//         break;
-//       }
-//     }
-//     cb(list[index], passes);
-//     // passes ? list[index].marker.setMap(map) : list[index].marker.setMap(null);
-//   }
-// }
 
 function filterMarkers(list, props) {
   var min = 0
@@ -112,20 +77,6 @@ function filterMarkers(list, props) {
   }
 }
 
-
-
-// function filterMarkers(prop, min, max) {
-//   //    var secProp = prop === "rent" ? prop : "bedrooms";
-//   for (marker in markers) {
-//     var marker = markers[marker];
-//     if (inRange(marker[prop], min , max)) {
-//       marker.marker.setMap(map);
-//     }
-//     else {
-//       marker.marker.setMap(null);
-//     }
-//   }
-// }
 
 function inRange (val, min, max) {
   return val >= min && val <= max;
