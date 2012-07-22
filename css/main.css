@@ -13,7 +13,10 @@ h1, h2 ,h3, h4, h5, h6 {
 }
 
 
-#map_canvas { height: 100% }
+#map_canvas {
+  height: 100%;
+  width: 100%;
+}
 
 #filtersWrapper {
   width: 500px;
