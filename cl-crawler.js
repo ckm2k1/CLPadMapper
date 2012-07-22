@@ -119,7 +119,7 @@ var clCrawler = new Crawler({
 
   callback: function () {
 
-    if (clCrawler.iterNum > 0) {
+    if (pages > 0) {
       var $ = this.jQuery
         , paras = $("p")
         , links = []
@@ -141,7 +141,7 @@ var clCrawler = new Crawler({
       console.log("Queueing next page for link gathering.\n");
       var nextPageLink = $("#nextpage").find("a").attr("href");
       nextPageLink && clCrawler.enqueue(baseURL + nextPageLink);
-      clCrawler.iterNum--;
+      // clCrawler.iterNum--;
       pages--;
     }
     else {
@@ -150,5 +150,6 @@ var clCrawler = new Crawler({
   }
 });
 
-clCrawler.iterNum = pages = 4;
+// clCrawler.iterNum =
+pages = 4;
 clCrawler.enqueue(baseURL);
