@@ -47,14 +47,19 @@ var sliders = function() {
   });
 
   //Initialize the labels.
-  $(".bedroom-label").html($(".slider-bedrooms").slider('value') + "br");
+  var slider_bed  = $( ".slider-bedrooms" )
+  , slider_rent   = $( ".slider-rentrange" );
+
   $( ".bedroom-label" ).html(
-      $( ".slider-bedrooms" ).slider( "values", 0 )
+      slider_bed.slider("values", 0)
     + " - "
-    + $( ".slider-bedrooms" ).slider( "values", 1 )
-    + " BR " );
+    + slider_bed.slider("values", 1)
+    + " BR "
+   );
+
   $( ".rent-label" ).html( "$"
-    + $( ".slider-rentrange" ).slider( "values", 0 )
+    + slider_rent.slider("values", 0)
     + " - $"
-    + $( ".slider-rentrange" ).slider( "values", 1 ) );
+    + slider_rent.slider("values", 1)
+    );
 };
