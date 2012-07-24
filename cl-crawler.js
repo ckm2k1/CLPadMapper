@@ -79,7 +79,14 @@ var processPost = function processPostBody() {
   , clPostID    = $("span.postingidtext").text().split(":")[1].trim()
   , clPostObj   = { };
 
-  //preprocess, remove images div.
+
+  imageList = [];
+  //Collect all the image links.
+  $(".iw #iwt .tn a").each(function(index, elem) {
+    imageList.push($(elem).attr("href"));
+  });
+
+  //remove image section from DOM.
   $(".iw").remove();
   $("#userbody script").remove();
   postBody = $("#userbody").html();

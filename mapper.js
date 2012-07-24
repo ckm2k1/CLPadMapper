@@ -58,13 +58,14 @@ function initialize() {
   //Hook up the markers' click event with the CL info window.
   $.each(markers, function(index, value) {
     gmaps.event.addListener(value.marker, 'click', function() {
-      var i, index;
 
-      marker = markers[markers.indexOf(value)].marker;
-      console.log(value);
+
+      marker = value.marker;
       var content = tmpl("info_template", value)
+
       infoWindow.setContent(content);
       infoWindow.open(map, marker);
+
       //Set the marker icon to the gray image.
       marker.setIcon(pinImageVis);
       marker.setShadow(pinShadowVis);
