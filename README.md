@@ -8,6 +8,6 @@ WARNING: I'm currently hacking on this code for my own fun so it's very likely t
 TODO
 -----------
 1. Create image widget for the infowindow popup
-2. Refactor sliders and mapper code
-3. Mark a pin in gray after it's been viewed
+2. Refactor sliders and mapper code - progress
+3. Mark a pin in gray after it's been viewed -- done
 4. Cookies to remeber filtering settings

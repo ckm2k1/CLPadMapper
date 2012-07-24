@@ -42,7 +42,7 @@ var sliders = function() {
             ui.values[0]
           + " - "
           + ui.values[1]
-          + " Beds ");
+          + " BR ");
       }
   });
 
@@ -52,7 +52,7 @@ var sliders = function() {
       $( ".slider-bedrooms" ).slider( "values", 0 )
     + " - "
     + $( ".slider-bedrooms" ).slider( "values", 1 )
-    + " Beds " );
+    + " BR " );
   $( ".rent-label" ).html( "$"
     + $( ".slider-rentrange" ).slider( "values", 0 )
     + " - $"

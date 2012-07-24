@@ -4,7 +4,7 @@ var request = require('request');
 var fs = require('fs');
 
 //Some config
-var cacheFileName = 'coordCache.js'
+var cacheFileName = 'coordCache.ex'
 , ccfHandle = fs.openSync(cacheFileName, "w", 0666)
 , baseURL = "http://montreal.en.craigslist.ca/apa/"
 , coordsCacheArray = []
@@ -62,13 +62,12 @@ function checkState() {
     geocoded--;
     console.log("Geocoded: " + geocoded);
     if (!geocoded) {
-      // pages--;
       console.log("Pages: " + pages);
       if (!pages) writeCoordCache();
     }
 }
 
-var getAddress = function getGmapAddress() {
+var processPost = function processPostBody() {
   var $         = this.jQuery
   , addressLink = $("small > a").attr("href")
   , postTitle   = $("h2").text()
@@ -80,21 +79,16 @@ var getAddress = function getGmapAddress() {
   , clPostID    = $("span.postingidtext").text().split(":")[1].trim()
   , clPostObj   = { };
 
+  //preprocess, remove images div.
+  $(".iw").remove();
+  $("#userbody script").remove();
+  postBody = $("#userbody").html();
+
   if (typeof addressLink !== 'undefined' && addressLink !== null) {
     //Use url.parse to extract the query portion of the url and split based on loc argument.
     //We're not decoding the url here because we will use it shortly for geocoding
     //the address.
     qAddress = url.parse(addressLink, true).search.split('loc%3A+')[1];
-
-    imageList = [];
-    //Collect all the image links.
-    $(".iw #iwt .tn a").each(function(index, elem) {
-      imageList.push($(this).attr("href"));
-    });
-
-    $(".iw").remove();
-    $("#userbody script").remove();
-    postBody = $("#userbody").html();
 
     clPostObj.title     = postTitle;
     clPostObj.body      = postBody;
@@ -110,11 +104,10 @@ var getAddress = function getGmapAddress() {
     checkState();
     console.log('address link not found');
     console.log(geocoded + ":" + baseURL + clPostID + ".html");
-    return;
   }
 }
 
-var pageCrawler = new Crawler({ callback: getAddress });
+var pageCrawler = new Crawler({ callback: processPost });
 var clCrawler = new Crawler({
 
   callback: function () {
@@ -141,7 +134,6 @@ var clCrawler = new Crawler({
       console.log("Queueing next page for link gathering.\n");
       var nextPageLink = $("#nextpage").find("a").attr("href");
       nextPageLink && clCrawler.enqueue(baseURL + nextPageLink);
-      // clCrawler.iterNum--;
       pages--;
     }
     else {
@@ -150,6 +142,5 @@ var clCrawler = new Crawler({
   }
 });
 
-// clCrawler.iterNum =
 pages = 4;
 clCrawler.enqueue(baseURL);

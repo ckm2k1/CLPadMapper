@@ -65,52 +65,6 @@ ul.filterList li {
   display: block;
 }
 
-#ci {
-  display: table-cell;
-  text-align: center;
-  vertical-align: middle;
-  width: 602px;
-  height: 452px;
-  border: 1px #CCC solid;
-}
-.iw::before, .iw::after {
-content: "";
-display: table;
-}
-.iw::after {
-clear: both;
-}
-
-.iw div {
-float: left;
-margin: 2px;
-}
-
-.tn {
-clear: both;
-}
-
-#iwt {
-margin: 0;
-}
-
-.iw div {
-float: left;
-margin: 2px;
-}
-
-#ci * {
-vertical-align: middle;
-}
-
-img {
-border: 0;
-}
-
-#ci span {
-display: inline-block;
-height: 100%;
-}
-#ci {
-text-align: center;
+.clear-div {
+  clear:both;height:5px;
 }
