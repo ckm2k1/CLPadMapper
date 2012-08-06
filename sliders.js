@@ -9,7 +9,7 @@ function filter() {
 var sliders = function() {
 
   $( ".slider-rentrange" ).slider({
-      values: [500, 1000]
+      values: [650, 900]
     , range: true
     , min: 200
     , max: 3000
@@ -17,7 +17,6 @@ var sliders = function() {
     , change: function(event, ui) {
         markers.rent = [ui.values[0], ui.values[1]];
         filter();
-        // filterMarkers("rent", ui.values[0], ui.values[1]);
       }
     , slide: function (event, ui) {
         $( ".rent-label" ).html( "$"
@@ -27,7 +26,7 @@ var sliders = function() {
       }
   });
   $( ".slider-bedrooms" ).slider({
-      values: [1, 2]
+      values: [1, 1]
     , range : true
     , min   : 1
     , max   : 7
@@ -35,7 +34,6 @@ var sliders = function() {
     , change: function(event, ui) {
         markers.bedrooms = [ui.values[0], ui.values[1]];
         filter();
-        // filterMarkers("bedrooms", ui.values[0], ui.values[1]);
       }
     , slide: function (event, ui) {
         $( ".bedroom-label" ).html(

@@ -10,7 +10,7 @@
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAvayKvKQHlGJ3B-Uokjp306F__q78sdSk&sensor=false"></script>
 
     <link rel="stylesheet" href="css/main.css">
-    <script type="text/javascript" src="coordCache.js"></script>
+    <script type="text/javascript" src="coordCache.ex"></script>
     <script type="text/javascript" src="templates.js"></script>
     <script type="text/javascript" src="mapper.js"></script>
     <script type="text/javascript" src="sliders.js"></script>
@@ -19,6 +19,7 @@
       $(document).ready(function(){
         initialize();
         sliders();
+        filter();
       });
     </script>
   </head>
@@ -28,6 +29,10 @@
       <h2><%=title%></h2>
         <h4>Rent: $<%=rent%>, Bed: <%=bedrooms%>br</h4>
       <%=body%>
+      <% for (var i=0; i < pics.length; i++) { %>
+        <img src="<%=pics[i]%>" target="_blank">
+      <% } %>
+      <br>
       <a href='<%=clPostURL%>'>Link to original CL post</a>
     </script>
 

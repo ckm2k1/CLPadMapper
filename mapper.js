@@ -52,6 +52,7 @@ function initialize() {
     container.body = cachedElem.body;
     container.clPostURL = cachedElem.clURL;
     container.marker = marker;
+    container.pics = cachedElem.imageList;
 
     markers.push(container);
   }
@@ -72,8 +73,8 @@ function initialize() {
     });
   });
   // initialize the ranges
-  markers.rent = [500, 1000];
-  markers.bedrooms = [1, 2];
+  markers.rent = [650, 900];
+  markers.bedrooms = [1, 1];
 }
 
 

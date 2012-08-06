@@ -33,8 +33,17 @@ function geoCode(clPost) {
 
   request({uri: queryURL, method: 'GET'}, function (error, response, body) {
 
-    var response  = body && JSON.parse(body)
-    , results     = response.ResultSet.Results;
+    //Sink failed queries to the geocoding api.
+    try {
+      response = body && JSON.parse(body);
+    }
+    catch (e) {
+      console.log('Error parsing body of post');
+      // response = "";
+      return;
+    }
+
+    var results = response.ResultSet.Results;
 
     if (typeof results !== "undefined" && results !== null) {
       var results = results[0]
@@ -44,7 +53,7 @@ function geoCode(clPost) {
 
       clPost.coords = coords;
       coordsCacheArray.push(clPost);
-
+      checkState();
     }
     else {
       console.log("Geocoding failed!");
@@ -53,7 +62,6 @@ function geoCode(clPost) {
     }
 
     console.log(geocoded + ": " + clPost.clURL);
-    checkState();
   });
 
 }
